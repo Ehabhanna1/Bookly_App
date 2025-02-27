@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "davidwoo.flutter-auto-import"
+        "davidwoo.flutter-auto-import",
+        "inferrinizzard.prettier-sql-vscode"
     ]
 }
