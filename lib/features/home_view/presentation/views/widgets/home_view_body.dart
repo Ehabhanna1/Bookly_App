@@ -1,11 +1,8 @@
-import 'package:bookly_app/constants.dart';
-import 'package:bookly_app/core/utils/assets.dart';
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home_view/presentation/views/widgets/best_seller_list_view_item.dart';
+import 'package:bookly_app/features/home_view/presentation/views/widgets/best_seller_list_view.dart';
 import 'package:bookly_app/features/home_view/presentation/views/widgets/custom_app_bar.dart';
 import 'package:bookly_app/features/home_view/presentation/views/widgets/feature_books_list_view.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class HomeViewBody extends StatelessWidget {
@@ -13,24 +10,57 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 27),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-         const CustomAppBar(),
+
+     return CustomScrollView(
+      slivers: [
+       const SliverToBoxAdapter(
+          child:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+             Padding(
+               padding: const EdgeInsets.symmetric(horizontal: 20.0,),
+               child: const CustomAppBar(),
+             ),
+              
+             const FeatureBooksListView(),
+            const  SizedBox(height: 30,),
+             const Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0,),
+                child: Text("Best Seller",style: Styles.textStyle22),
+              ),
+              SizedBox(height: 20,),
+              
           
-          FeatureBooksListView(),
-          SizedBox(height: 30,),
-          Text("Best Seller",style: Styles.textStyle22),
-          SizedBox(height: 20,),
-          const BestSellerListViewItem(),
+            ],
+          ) ,
+          
+        ),
+
+       const SliverFillRemaining(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: const BestSellerListView(),
+          ),
+
+          ),
+        
+
+
+
+      ],
+
       
-        ],
-      ),
     );
+
+
+
+
+  
   }
 }
+
+
+
 
 
 
