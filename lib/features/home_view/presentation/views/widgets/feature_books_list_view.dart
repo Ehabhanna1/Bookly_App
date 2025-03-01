@@ -18,6 +18,7 @@ class FeatureBooksListView extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 5 ),
             child: const CustomBookImage(),
           );
+         
         } ,
       ),
     );

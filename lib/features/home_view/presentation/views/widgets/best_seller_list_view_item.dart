@@ -47,13 +47,14 @@ class BestSellerListViewItem extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: Styles.textStyle22.copyWith(
                             fontFamily: kGtSectraFine,
+                            fontWeight: FontWeight.bold,
                             
                           ),
                         ),),
                         const SizedBox(height:3,),
                         Text(
                           'J.K Rowling',
-                          style: Styles.textStyle16,
+                          style: Styles.textStyle18,
                         ),
                         const SizedBox(height:3,),
                         Row(
