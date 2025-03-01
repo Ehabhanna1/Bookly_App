@@ -47,7 +47,7 @@ class BestSellerListViewItem extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           style: Styles.textStyle22.copyWith(
                             fontFamily: kGtSectraFine,
-                            fontWeight: FontWeight.bold,
+                            
                             
                           ),
                         ),),
@@ -62,8 +62,7 @@ class BestSellerListViewItem extends StatelessWidget {
                           children: [
                             Text(
                           '19.99€',
-                          style: Styles.textStyle22.copyWith(
-                            fontWeight: FontWeight.bold,),
+                          style: Styles.textStyle22
                           ),
           
                          const BookRating(),
