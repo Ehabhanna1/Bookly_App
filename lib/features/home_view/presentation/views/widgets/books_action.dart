@@ -12,22 +12,30 @@ class BooksAction extends StatelessWidget {
         children: [
           Expanded(
             child: CustomButton(
-            textButton: "19.99€",
-           
-            onPressed: (){},
-            backgroundColor: Colors.white,
-            textColor: Colors.black,
-            borderRadius: BorderRadius.only(topLeft: Radius.circular(16),bottomLeft: Radius.circular(16),),
-          )),
+              textButton: "19.99€",
+
+              onPressed: () {},
+              backgroundColor: Colors.white,
+              textColor: Colors.black,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(16),
+                bottomLeft: Radius.circular(16),
+              ),
+            ),
+          ),
           Expanded(
             child: CustomButton(
-            textButton: "Free Preview",
-            fontSize: 16,
-            onPressed: (){},
-            backgroundColor: Color(0xffEF8262),
-            textColor: Colors.white,
-            borderRadius: BorderRadius.only(topRight: Radius.circular(16),bottomRight: Radius.circular(16),),
-          )),
+              textButton: "Free Preview",
+              fontSize: 16,
+              onPressed: () {},
+              backgroundColor: Color(0xffEF8262),
+              textColor: Colors.white,
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(16),
+                bottomRight: Radius.circular(16),
+              ),
+            ),
+          ),
         ],
       ),
     );
