@@ -4,6 +4,7 @@ import 'package:bookly_app/features/home_view/data/data_sources/home_remote_data
 import 'package:bookly_app/features/home_view/domain/entities/book_entity.dart';
 import 'package:bookly_app/features/home_view/domain/repositories/home_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 class HomeRepoImpl extends HomeRepo{
 
@@ -30,7 +31,12 @@ class HomeRepoImpl extends HomeRepo{
   
     return right(books);
  } catch (e) {
-   return left(Failure());
+   // ignore: deprecated_member_use
+   if (e is DioError) {
+  return left(ServerFailure.fromDioError(e));
+}
+  return left(ServerFailure(e.toString()));
+
 }
 
   }
@@ -51,7 +57,12 @@ class HomeRepoImpl extends HomeRepo{
   
     return right(books);
  } catch (e) {
-   return left(Failure());
+  // ignore: deprecated_member_use
+  if (e is DioError) {
+  return left(ServerFailure.fromDioError(e));
+}
+  return left(ServerFailure(e.toString()));
+
  }
   }
 
