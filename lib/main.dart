@@ -60,7 +60,7 @@ class BooklyApp extends StatelessWidget {
 
             ),
 
-          );
+          )..fetchFeaturedBooks();
 
         }),
         BlocProvider(create: (context){
